@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Clone</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .service-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+        .details-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .details-btn:hover {
+            background-color: #f3f4f6;
+        }
+        .primary-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .primary-btn:hover {
+            background-color: #333;
+        }
+        .input-container {
+            transition: border 0.2s ease-in-out;
+        }
+        .input-container:focus-within {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <h1 class="text-5xl font-bold mb-8">Go anywhere with Uber</h1>
+
+        <!-- Search Section -->
+        <div class="bg-gray-100 p-6 rounded-lg mb-12">
+            <div class="flex flex-col gap-4 mb-4">
+                <div class="flex items-center bg-white p-3 rounded input-container">
+                    <i class="fas fa-circle text-black mr-3"></i>
+                    <input type="text" placeholder="Pickup location" class="w-full outline-none">
+                </div>
+                <div class="flex items-center bg-white p-3 rounded input-container">
+                    <i class="fas fa-square text-black mr-3"></i>
+                    <input type="text" placeholder="Dropoff location" class="w-full outline-none">
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <button class="flex items-center bg-white px-4 py-2 rounded hover:bg-gray-50 transition-colors duration-200">
+                    <i class="far fa-calendar mr-2"></i>
+                    Today
+                </button>
+                <button class="flex items-center bg-white px-4 py-2 rounded hover:bg-gray-50 transition-colors duration-200">
+                    <i class="far fa-clock mr-2"></i>
+                    Now
+                </button>
+            </div>
+            <button class="bg-black text-white w-full py-3 rounded mt-4 font-semibold primary-btn">
+                See prices
+            </button>
+            <button class="text-black w-full py-3 mt-2">
+                Log in to see your recent activity
+            </button>
+        </div>
+
+        <!-- Suggestions Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8">Suggestions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Courier Card -->
+                <div class="bg-gray-100 p-6 rounded-lg flex justify-between items-center service-card">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Courier</h3>
+                        <p class="text-gray-600 mb-4">Uber makes same-day item delivery easier than ever.</p>
+                        <button class="bg-white px-6 py-2 rounded font-semibold details-btn">Details</button>
+                    </div>
+                    <img src="images/courier.svg" alt="Courier" class="w-24 h-24 p-4">
+                </div>
+
+                <!-- Grocery Card -->
+                <div class="bg-gray-100 p-6 rounded-lg flex justify-between items-center service-card">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Grocery</h3>
+                        <p class="text-gray-600 mb-4">Get groceries delivered through Uber Eats.</p>
+                        <button class="bg-white px-6 py-2 rounded font-semibold details-btn">Details</button>
+                    </div>
+                    <img src="images/grocery.svg" alt="Grocery" class="w-24 h-24 p-4">
+                </div>
+
+                <!-- Rental Cars Card -->
+                <div class="bg-gray-100 p-6 rounded-lg flex justify-between items-center service-card">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Rental Cars</h3>
+                        <p class="text-gray-600 mb-4">Your perfect rental car is a few clicks away.</p>
+                        <button class="bg-white px-6 py-2 rounded font-semibold details-btn">Details</button>
+                    </div>
+                    <img src="images/rental.svg" alt="Rental Cars" class="w-24 h-24 p-4">
+                </div>
+
+                <!-- Reserve Card -->
+                <div class="bg-gray-100 p-6 rounded-lg flex justify-between items-center service-card">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Reserve</h3>
+                        <p class="text-gray-600 mb-4">Reserve your ride in advance.</p>
+                        <button class="bg-white px-6 py-2 rounded font-semibold details-btn">Details</button>
+                    </div>
+                    <img src="images/reserve.svg" alt="Reserve" class="w-24 h-24 p-4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Ride Section -->
+        <section class="mb-12">
+            <div class="bg-gray-100 p-6 rounded-lg flex justify-between items-center service-card">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Ride</h3>
+                    <p class="text-gray-600 mb-4">Go anywhere with Uber. Request a ride, hop in, and go.</p>
+                    <button class="bg-white px-6 py-2 rounded font-semibold details-btn">Details</button>
+                </div>
+                <img src="images/ride.svg" alt="Ride" class="w-24 h-24 p-4">
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Log in to see your recent activity</h2>
+            <p class="text-gray-600 mb-8">View past trips, tailored suggestions, support resources, and more.</p>
+            <div class="flex flex-col gap-4">
+                <button class="bg-black text-white py-3 px-8 rounded font-semibold primary-btn">
+                    Log in to your account
+                </button>
+                <a href="#" class="text-black underline">Don't have an Uber account? Sign up</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
